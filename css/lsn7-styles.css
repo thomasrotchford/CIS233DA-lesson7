@@ -44,7 +44,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Header */
 header {
     flex: 0 0 320px;
     display: flex;
@@ -55,7 +54,6 @@ header {
     white-space: nowrap;
 }
 
-/* Navigation */
 nav ul {
     list-style: none;
 }
@@ -64,7 +62,6 @@ nav li {
     margin: 5px 0;
 }
 
-/* Parent Links */
 nav > ul > li > a {
     display: block;
     padding: 10px;
@@ -103,26 +100,22 @@ nav ul ul a:focus {
     transform: translateX(5px);
 }
 
-/* Active Page */
 nav > ul > li.active > a {
     background-color: #ffeb3b;
     color: #17365d;
     font-weight: bold;
 }
 
-/* Show Active Page Child Links */
 nav > ul > li.active > ul {
     display: block;
 }
 
-/* Main Content */
 main {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
-/* Sections */
 main section {
     position: relative;
     flex: 0 0 550px;
@@ -131,7 +124,6 @@ main section {
     border-left: 3px solid var(--border-color);
 }
 
-/* Section Headings */
 main section h2 {
     position: absolute;
     top: 20px;
@@ -144,11 +136,62 @@ main section h2 {
     transform-origin: top left;
 }
 
-/* Accessibility: Reduce Motion */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation: none !important;
         transition: none !important;
     }
+}
+
+.cheatsheet section {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-columns: 320px;
+    gap: 20px;
+    width: max-content;
+    height: 95vh;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.example-code-card {
+    background-color: #fff9c4;
+    color: #17365d;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 4px 4px 8px #333333;
+    min-height: 0;
+}
+
+.example-code-card h3 {
+    background-color: #2e7d32;
+    color: #ffeb3b;
+    padding: 8px 15px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px;
+}
+
+.example-code-card p {
+    margin-bottom: 10px;
+}
+
+.example-code-card pre {
+    background-color: #e3f2fd;
+    color: #17365d;
+    border: 2px solid #1565c0;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+}
+
+.example-code-card code {
+    font-family: var(--code-font);
+}
+
+.example-code-card:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
 }
 
