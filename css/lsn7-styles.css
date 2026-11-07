@@ -26,3 +26,129 @@ Instructor: Brian Thurber
     box-sizing: border-box;
 }
 
+
+body {
+    height: 95vh;
+    overflow-x: scroll;
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+}
+
+
+/* Header */
+header {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1b5e20;
+    color: white;
+    padding: 20px;
+    white-space: nowrap;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin: 5px 0;
+}
+
+/* Parent Links */
+nav > ul > li > a {
+    display: block;
+    padding: 10px;
+    background-color: #0d47a1;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav > ul > li > a:hover,
+nav > ul > li > a:focus {
+    background-color: #ffeb3b;
+    color: #17365d;
+    transform: translateX(5px);
+}
+
+/* Child Links */
+nav ul ul {
+    display: none;
+    padding-left: 15px;
+}
+
+nav ul ul a {
+    display: block;
+    padding: 8px;
+    background-color: #1565c0;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav ul ul a:hover,
+nav ul ul a:focus {
+    background-color: #ffeb3b;
+    color: #17365d;
+    transform: translateX(5px);
+}
+
+/* Active Page */
+nav > ul > li.active > a {
+    background-color: #ffeb3b;
+    color: #17365d;
+    font-weight: bold;
+}
+
+/* Show Active Page Child Links */
+nav > ul > li.active > ul {
+    display: block;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+/* Sections */
+main section {
+    position: relative;
+    flex: 0 0 550px;
+    min-height: 450px;
+    padding: 20px 20px 20px 85px;
+    border-left: 3px solid var(--border-color);
+}
+
+/* Section Headings */
+main section h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: var(--link-color);
+    white-space: nowrap;
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: top left;
+}
+
+/* Accessibility: Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
