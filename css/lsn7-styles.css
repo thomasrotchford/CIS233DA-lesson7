@@ -1,0 +1,28 @@
+
+/*
+Name: Thomas Rotchford
+Course and Section: CIS233DA - 27491
+Instructor: Brian Thurber
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Source+Code+Pro&display=swap');
+
+:root {
+    --background-color: #1565c0;
+    --text-color: #ffffff;
+    --heading-color: #ffeb3b;
+    --border-color: #2e7d32;
+    --accent-color: #ffeb3b;
+    --link-color: #a5d6a7;
+
+    --heading-font: 'Comic Neue', 'Comic Sans MS', cursive;
+    --body-font: 'Comic Neue', 'Trebuchet MS', sans-serif;
+    --code-font: 'Source Code Pro', 'Courier New', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
