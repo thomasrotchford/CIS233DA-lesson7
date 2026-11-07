@@ -1,11 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Thomas Rotchford">
-  <meta name="description" content="Lesson 7 reflection">
-  <meta name="keywords" content="Lesson 7, cheatsheet, HTML">
-
+    <meta charset="UTF-8">
+    <meta name="author" content="Thomas Rotchford">
+    <meta name="description" content="Lesson 7 CSS transformation cheatsheet">
+    <meta name="keywords" content="Lesson 7, cheatsheet, CSS, transforms, transitions, animations">
     <title>Lesson 7 Transformation Cheatsheet</title>
 </head>
 
@@ -25,12 +25,12 @@
                 </li>
 
                 <li>
-                    <a href="transformation-cheatsheet.html">Cheatsheet</a>
+                    <a href="transformations-cheatsheet.html">Cheatsheet</a>
                     <ul>
-                        <li><a href="transformation-cheatsheet.html#terminology">Terminology</a></li>
-                        <li><a href="transformation-cheatsheet.html#transform-properties">Transform Properties</a></li>
-                        <li><a href="transformation-cheatsheet.html#transition-properties">Transition Properties</a></li>
-                        <li><a href="transformation-cheatsheet.html#animation-properties">Animation Properties</a></li>
+                        <li><a href="transformations-cheatsheet.html#terminology">Terminology</a></li>
+                        <li><a href="transformations-cheatsheet.html#transform-properties">Transform Properties</a></li>
+                        <li><a href="transformations-cheatsheet.html#transition-properties">Transition Properties</a></li>
+                        <li><a href="transformations-cheatsheet.html#animation-properties">Animation Properties</a></li>
                     </ul>
                 </li>
 
@@ -52,83 +52,294 @@
 
             <dl>
                 <dt>Animations</dt>
-                <dd>
-                    Animations allow elements on a webpage to
-                    change or move over time without needing
-                    someone to interact with them.
-                </dd>
+                <dd>Make elements move or change over time.</dd>
 
                 <dt>Keyframes</dt>
-                <dd>
-                    Keyframes are used to set the different
-                    stages of an animation and control how
-                    an element changes during those stages.
-                </dd>
+                <dd>Set the steps of an animation.</dd>
 
                 <dt>Transforms</dt>
-                <dd>
-                    Transforms allow you to change the
-                    appearance of an element by moving,
-                    rotating, resizing, or tilting it.
-                </dd>
+                <dd>Change an element's size, position, or angle.</dd>
 
                 <dt>Transitions</dt>
-                <dd>
-                    Transitions make changes between CSS
-                    property values happen smoothly instead
-                    of changing instantly.
-                </dd>
+                <dd>Make changes happen smoothly.</dd>
 
                 <dt>Easing</dt>
-                <dd>
-                    Easing controls how fast or slow an
-                    animation or transition moves at
-                    different points.
-                </dd>
+                <dd>Controls how movement speeds up or slows down.</dd>
 
                 <dt>Rotation</dt>
-                <dd>
-                    Rotation turns an element around a
-                    point by a certain number of degrees.
-                </dd>
+                <dd>Turns an element around a point.</dd>
 
                 <dt>Scale</dt>
-                <dd>
-                    Scale changes the size of an element,
-                    making it larger or smaller.
-                </dd>
+                <dd>Makes an element bigger or smaller.</dd>
 
                 <dt>Skew</dt>
-                <dd>
-                    Skew tilts or slants an element
-                    horizontally or vertically.
-                </dd>
+                <dd>Slants an element.</dd>
 
                 <dt>Delay</dt>
-                <dd>
-                    Delay controls how long an animation
-                    or transition waits before starting.
-                </dd>
+                <dd>Sets how long to wait before starting.</dd>
 
                 <dt>Transition Timing</dt>
-                <dd>
-                    Transition timing controls how the
-                    speed of a transition changes from
-                    the beginning to the end.
-                </dd>
+                <dd>Controls how speed changes during a transition.</dd>
             </dl>
         </section>
 
         <section>
             <h2 id="transform-properties">Transform Properties</h2>
+
+            <div class="example-code-card">
+                <h3>Translate()</h3>
+                <p>Moves an element in two directions.</p>
+                <pre><code>.box {
+    transform: translate(20px, 10px);
+}</code></pre>
+                <div class="preview translate-example">Translate Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>TranslateX()</h3>
+                <p>Moves an element left or right.</p>
+                <pre><code>.box {
+    transform: translateX(20px);
+}</code></pre>
+                <div class="preview translate-x-example">TranslateX Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>TranslateY()</h3>
+                <p>Moves an element up or down.</p>
+                <pre><code>.box {
+    transform: translateY(20px);
+}</code></pre>
+                <div class="preview translate-y-example">TranslateY Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>Rotate()</h3>
+                <p>Turns an element.</p>
+                <pre><code>.box {
+    transform: rotate(45deg);
+}</code></pre>
+                <div class="preview rotate-example">Rotate Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>Scale()</h3>
+                <p>Makes an element bigger or smaller.</p>
+                <pre><code>.box {
+    transform: scale(1.5);
+}</code></pre>
+                <div class="preview scale-example">Scale Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>Skew()</h3>
+                <p>Slants an element.</p>
+                <pre><code>.box {
+    transform: skew(20deg);
+}</code></pre>
+                <div class="preview skew-example">Skew Preview</div>
+            </div>
         </section>
 
         <section>
             <h2 id="transition-properties">Transition Properties</h2>
+
+            <div class="example-code-card">
+                <h3>transition-property</h3>
+                <p>Chooses what changes.</p>
+                <pre><code>.box {
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.box:hover {
+    background-color: yellow;
+}</code></pre>
+                <div class="preview property-example">Property Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>transition-duration</h3>
+                <p>Sets how long a change takes.</p>
+                <pre><code>.box {
+    transition: transform 2s;
+}
+
+.box:hover {
+    transform: translateX(20px);
+}</code></pre>
+                <div class="preview duration-example">Duration Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>transition-timing-function</h3>
+                <p>Controls the speed of a change.</p>
+                <pre><code>.box {
+    transition: transform 2s;
+    transition-timing-function: ease;
+}
+
+.box:hover {
+    transform: translateX(20px);
+}</code></pre>
+                <div class="preview timing-example">Timing Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>transition-delay</h3>
+                <p>Waits before a change starts.</p>
+                <pre><code>.box {
+    transition: transform 2s;
+    transition-delay: 1s;
+}
+
+.box:hover {
+    transform: translateX(20px);
+}</code></pre>
+                <div class="preview delay-example">Delay Preview</div>
+            </div>
         </section>
 
         <section>
             <h2 id="animation-properties">Animation Properties</h2>
+
+            <div class="example-code-card">
+                <h3>@keyframes</h3>
+                <p>Sets the steps of an animation.</p>
+                <pre><code>@keyframes move {
+    from { left: 0; }
+    to { left: 50px; }
+}
+
+.box {
+    position: relative;
+    animation: move 2s;
+}</code></pre>
+                <div class="preview keyframes-example">Keyframes Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>From and To</h3>
+                <p>Sets the start and end.</p>
+                <pre><code>@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.box {
+    animation: fade 2s;
+}</code></pre>
+                <div class="preview from-to-example">From and To Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>Percentages</h3>
+                <p>Sets steps using percentages.</p>
+                <pre><code>@keyframes grow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+.box {
+    animation: grow 2s;
+}</code></pre>
+                <div class="preview percent-example">Percent Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>animation-name</h3>
+                <p>Chooses an animation.</p>
+                <pre><code>.box {
+    animation-name: fade;
+    animation-duration: 2s;
+}</code></pre>
+                <div class="preview name-example">Name Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>animation-duration</h3>
+                <p>Sets how long it takes.</p>
+                <pre><code>.box {
+    animation-name: fade;
+    animation-duration: 3s;
+}</code></pre>
+                <div class="preview animation-duration-example">Duration Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>animation-timing-function</h3>
+                <p>Controls animation speed.</p>
+                <pre><code>.box {
+    animation: fade 2s;
+    animation-timing-function: ease;
+}</code></pre>
+                <div class="preview animation-timing-example">Timing Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>animation-delay</h3>
+                <p>Waits before starting.</p>
+                <pre><code>.box {
+    animation: fade 2s;
+    animation-delay: 1s;
+}</code></pre>
+                <div class="preview animation-delay-example">Delay Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>animation-iteration-count</h3>
+                <p>Sets how many times it repeats.</p>
+                <pre><code>.box {
+    animation: fade 2s;
+    animation-iteration-count: 3;
+}</code></pre>
+                <div class="preview iteration-example">Iteration Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>animation-direction</h3>
+                <p>Sets which way it plays.</p>
+                <pre><code>.box {
+    animation: fade 2s infinite;
+    animation-direction: alternate;
+}</code></pre>
+                <div class="preview direction-example">Direction Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>animation-fill-mode</h3>
+                <p>Keeps the ending style.</p>
+                <pre><code>.box {
+    animation: fade 2s;
+    animation-fill-mode: forwards;
+}</code></pre>
+                <div class="preview fill-example">Fill Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>animation-play-state</h3>
+                <p>Pauses or plays an animation.</p>
+                <pre><code>.box {
+    animation: fade 2s infinite;
+    animation-play-state: paused;
+}
+
+.box:hover {
+    animation-play-state: running;
+}</code></pre>
+                <div class="preview play-example">Play Preview</div>
+            </div>
+
+            <div class="example-code-card">
+                <h3>animation</h3>
+                <p>Combines animation settings.</p>
+                <pre><code>.box {
+    animation: fade 2s ease infinite;
+}</code></pre>
+                <div class="preview animation-example">Animation Preview</div>
+            </div>
+
         </section>
 
     </main>
